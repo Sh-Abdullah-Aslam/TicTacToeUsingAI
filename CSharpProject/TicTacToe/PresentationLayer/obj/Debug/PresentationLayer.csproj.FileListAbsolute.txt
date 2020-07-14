@@ -1,0 +1,10 @@
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\bin\Debug\PresentationLayer.exe.config
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\obj\Debug\PresentationLayer.csprojAssemblyReference.cache
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\obj\Debug\PresentationLayer.MainForm.resources
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\obj\Debug\PresentationLayer.Properties.Resources.resources
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Users\DELl\Desktop\Developments\TicTacToe\PresentationLayer\obj\Debug\PresentationLayer.pdb
