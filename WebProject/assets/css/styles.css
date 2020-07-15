@@ -53,3 +53,7 @@ body {
     background-color: #f5f5f5;
     left: 0;
 }
+
+.winPath{
+    color: red!important;
+}

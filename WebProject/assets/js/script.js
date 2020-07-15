@@ -92,8 +92,6 @@ function setMove(x, y, player) {
 	}
 }
 
-/* *** AI function that choice the best move *** */
-// Read more on https://github.com/Cledersonbc/tic-tac-toe-minimax/
 function minimax(state, depth, player) {
 	var best;
 
@@ -131,17 +129,18 @@ function minimax(state, depth, player) {
 	return best;
 }
 
-/* It calls the minimax function */
 function aiTurn() {
 	var x, y;
 	var move;
 	var cell;
 
-	if (emptyCells(board).length == 9) {
+	if (emptyCells(board).length == 9) 
+	{
 		x = parseInt(Math.random() * 3);
 		y = parseInt(Math.random() * 3);
 	}
-	else {
+	else 
+	{
 		move = minimax(board, emptyCells(board).length, COMP);
 		x = move[0];
 		y = move[1];
@@ -154,6 +153,7 @@ function aiTurn() {
 }
 /* main */
 function clickedCell(cell) {
+	console.log(board);
 	var button = document.getElementById("playAgain");
 	button.style.visibility = "hidden";
 	var conditionToContinue = gameOverAll(board) == false && emptyCells(board).length > 0;
@@ -207,7 +207,7 @@ function clickedCell(cell) {
 		button.style.visibility = "visible";
 	}
 	if (gameOverAll(board) == true || emptyCells(board).length == 0) {
-		button.value = "Restart";
+		button.value = "Play Again";
 		button.disabled = false;
 	}
 }
