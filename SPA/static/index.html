@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smart Tic Tac Toe | AI Based Tic Tac Toe in Node JS</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Play Tic Tac Toe Game. Smart AI based on Minimax algorithm"/>
+        <meta name="keywords" content="Smart Tic Tac Toe, AI Based Tic Tac Toe, Tic Tac Toe Project, Tic Tac Toe Game"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+        
+        <link rel="icon" type="image/png" href="/favicon.png"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+
+        <!--main body starts here-->
+        <div class="container-fluid">
+
+            <!-- navbar starts here -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <span class="navbar-brand mb-0 h1">Play tic-tac-toe</span>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-end ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Game <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Portfolios
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Abdullah Aslam</a>
+                                <a class="dropdown-item" href="#">Burhan Ahmed Satti</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </nav>
+            <!-- navbar ends here -->
+
+            <!-- container starts here : This has the main code of page except for header and footer -->
+            <div class="container customizedContatiner">
+                <br>
+                <strong>
+                    <div class="row text-center customizedRow">
+                            <div class="col-6">
+                                <span id="typeOfPlayer1">Player : </span>
+                                <span id="signSelectedByPlayer1">X</span>
+                            </div>
+                            <div class="col-6">
+                                <span id="typeOfPlayer2">Computer : </span>
+                                <span id="signSelectedByPlayer2">0</span>
+                            </div>
+                    </div>
+                </strong>
+
+                <div class="row text-center customizedRow">
+                    
+                    <div class="col-6">
+                        <strong><span>Play with: </span></strong>
+                        <select name="gameType" id="gameTypeSelect" onchange="">
+                            <!--CvsP : player versus computer-->
+                            <option value="CvsP">Computer</option>
+                            <!--PvsP : player versus player-->
+                            <option value="PvsP">Player</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-6">
+                            <strong><span>Time played</span></strong>
+                            <span id="timer">00:00</span>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center customizedRow">
+                    <div class="col-12">
+                        <span>
+                            GAME STATUS : <span id="message">not started yet</span>
+                        </span>
+                    </div>
+                </div>  
+
+                <div class="row justify-content-center customizedRow">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-4 box" id="00"></div>
+                            <div class="col-4 box" id="01"></div>
+                            <div class="col-4 box" id="02"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 box" id="10"></div>
+                            <div class="col-4 box" id="11"></div>
+                            <div class="col-4 box" id="12"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 box" id="20"></div>
+                            <div class="col-4 box" id="21"></div>
+                            <div class="col-4 box" id="22"></div>
+                        </div>
+                        <div class="row customizedRow justify-content-center">
+                            <div class="btn btn-outline-primary" id="playAgain">Play Again</div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+
+                <footer class="row footer justify-content-center">
+                    <div class="col-12 text-center">
+                        <span>&copy; <strong>Abdullah Aslam & Burhan Ahmed Satti</strong></span>
+                    </div>
+                </footer>
+
+            </div>
+            <!-- Containter ends here-->
+        </div>
+        <!-- main body ends here-->
+
+        <!-- bootstrap JavaScript files -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script src = "/js/script.js"></script>
+        <script src = "/js/ourCode.js"></script>
+
+    </body>
+</html>
