@@ -200,11 +200,22 @@ function clickedCell(cell) {
 
 		msg = document.getElementById("message");
 		msg.innerHTML = "You lose!";
+		let lost = parseInt($("#gamesLost").text());
+		let total = parseInt($("#gamesTotal").text());
+
+		$("#gamesLost").text((lost+1).toString());
+		$("#gamesTotal").text((total+1).toString());
 	}
 	if (emptyCells(board).length == 0 && !gameOverAll(board)) {
 		var msg = document.getElementById("message");
 		msg.innerHTML = "Draw!";
 		button.style.visibility = "visible";
+
+		let drawn = parseInt($("#gamesDrawn").text());
+		let total = parseInt($("#gamesTotal").text());
+
+		$("#gamesDrawn").text((drawn+1).toString());
+		$("#gamesTotal").text((total+1).toString());
 	}
 	if (gameOverAll(board) == true || emptyCells(board).length == 0) {
 		button.value = "Play Again";

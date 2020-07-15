@@ -57,3 +57,13 @@ body {
 .winPath{
     color: red!important;
 }
+
+.tableHeaders{
+    border:2px black solid;
+}
+
+#tableEntries{
+    border-left:2px black solid;
+    border-right:2px black solid;
+    border-bottom:2px black solid;
+}
