@@ -21,17 +21,25 @@ $(document).ready(function(){
         // remove red color from text
         grid = [[0,0,0],[0,0,0],[0,0,0]];
         $(".box").removeClass("winPath");
+        $("#gamesWon").text("0");
+        $("#gamesLost").text("0");
+        $("#gamesDrawn").text("0");
+        $("#gamesTotal").text("0");
 
         // assigning apropriate labels on the basis of type of game selected
         let selectedGameType = $(this).children("option:selected").val();
         if (selectedGameType === "CvsP")
         {
+            $("#gamesWonLabel").text("Won");
+            $("#gamesLostLabel").text("Lost");
             restartGame();
             $("#typeOfPlayer1").text("Player : ");
             $("#typeOfPlayer2").text("Computer : ");
         } 
         else
         {
+            $("#gamesWonLabel").text("Won (P1)");
+            $("#gamesLostLabel").text("Won (P2)");
             restartGame();
             $("#typeOfPlayer1").text("Player 1 : ");
             $("#typeOfPlayer2").text("Player 2 : ");
@@ -84,6 +92,12 @@ $(document).ready(function(){
                 {
                     $("#message").text("Draw");
                     $("#playAgain").css("visibility", "visible");
+                    
+                    let drawn = parseInt($("#gamesDrawn").text());
+                    let total = parseInt($("#gamesTotal").text());
+
+                    $("#gamesDrawn").text((drawn+1).toString());
+                    $("#gamesTotal").text((total+1).toString());
                 }
             }
         }
@@ -169,6 +183,23 @@ $(document).ready(function(){
         $("#message").text("Player "+ playerNo.toString() +" won");
         $("#playAgain").css("visibility", "visible");
         $(".box").attr("disabled", true);
+
+        if(playerNo == 1)
+        {
+            let wonByPlayer1 = parseInt($("#gamesWon").text());
+            let total = parseInt($("#gamesTotal").text());
+
+            $("#gamesWon").text((wonByPlayer1+1).toString());
+            $("#gamesTotal").text((total+1).toString());
+        }
+        else
+        {
+            let wonByPlayer2 = parseInt($("#gamesLost").text());
+            let total = parseInt($("#gamesTotal").text());
+
+            $("#gamesLost").text((wonByPlayer2+1).toString());
+            $("#gamesTotal").text((total+1).toString());
+        }
     }
 
     $("#playAgain").click(function()
@@ -188,4 +219,6 @@ $(document).ready(function(){
             $("#message").text("Player "+turn.toString() +"'s turn");
         }
     });
+
+
 });
