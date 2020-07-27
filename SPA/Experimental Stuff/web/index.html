@@ -29,6 +29,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -93,7 +94,7 @@
                         <div class="text-container">
                             <h1>Tic Tac Toe <span id="js-rotating"> vs Person, vs Simple Computer, vs Smart Computer</span></h1>
                             <p class="p-heading p-large">Smart Tic Tac Toe is a site for the artificially intelligent model which intelligently plays the Tic Tac Toe with human player. Play now to see how the model performs.</p>
-                            <a class="btn-solid-lg page-scroll" href="#intro">Start Playing the Game</a>
+                            <a class="btn-solid-lg page-scroll" href="#select-types-of-games">Start Playing the Game</a>
                         </div>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -135,7 +136,7 @@
     <div id="services" class="cards-2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" id="select-types-of-games">
                     <div class="section-title">Type of Game</div>
                     <h2>Choose the type of Game <br> That you wanna play...</h2>
                 </div> <!-- end of col -->
@@ -159,7 +160,7 @@
                             </ul>
                         </div>
                         <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#callMe">Start Playing</a>
+                            <span class="btn-solid-reg page-scroll gameTypeButton" id="PvsP">Start Playing</span>
                         </div> <!-- end of button-container -->
                     </div>
                     <!-- end of card -->
@@ -180,7 +181,7 @@
                             </ul>
                         </div>
                         <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#callMe">Start Playing</a>
+                            <span class="btn-solid-reg page-scroll gameTypeButton" id="SCvsP">Start Playing</span>
                         </div> <!-- end of button-container -->
                     </div>
                     <!-- end of card -->
@@ -201,13 +202,114 @@
                             </ul>
                         </div>
                         <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#callMe">Start Playing</a>
+                            <span class="btn-solid-reg page-scroll gameTypeButton" id="CvsP">Start Playing</span>
                         </div> <!-- end of button-container -->
                     </div>
                     <!-- end of card -->
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
+
+            <!-- EDITTED SECTION starts here -->
+            <div id="GameSection" class="hidden">
+                <strong>
+                    <div class="row text-center customizedRow">
+                            <div class="col-6">
+                                <span id="typeOfPlayer1">Player : </span>
+                                <span id="signSelectedByPlayer1">X</span>
+                            </div>
+                            <div class="col-6">
+                                <span id="typeOfPlayer2">Computer : </span>
+                                <span id="signSelectedByPlayer2">0</span>
+                            </div>
+                    </div>
+                </strong>
+                <!--
+                <div class="row text-center customizedRow">
+                    <div class="col-6">
+                        <strong><span>Play with: </span></strong>
+                        <select name="gameType" id="gameTypeSelect" onchange="">
+                            <!--CvsP : player versus computer->
+                            <option value="CvsP">Computer</option>
+                            <!--PvsP : player versus player->
+                            <option value="PvsP">Player</option>
+                        </select>
+                    </div>
+
+                    <div class="col-6">
+                            <strong><span>Time played</span></strong>
+                            <span id="timer">00:00</span>
+                    </div>
+                </div>
+                -->
+
+                <strong>
+                    <div class="row text-center customizedRow">    
+                        <div class="col-2"></div>
+                        <div class="col-2 tableHeaders" id="gamesWonLabel">
+                            Won
+                        </div>
+                        <div class="col-2 tableHeaders" id="gamesLostLabel">
+                            Lost
+                        </div>
+                        <div class="col-2 tableHeaders" id="gamesDrawnLabel">
+                            Drawn
+                        </div>
+                        <div class="col-2 tableHeaders" id="gamesTotalLabel">
+                            Total
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-2"></div>
+                            <div class="col-2 tableEntry" id="gamesWon">
+                                0
+                            </div>
+                            <div class="col-2 tableEntry" id="gamesLost">
+                                0
+                            </div>
+                            <div class="col-2 tableEntry" id="gamesDrawn">
+                                0
+                            </div>
+                            <div class="col-2 tableEntry" id="gamesTotal">
+                                0
+                            </div>
+                    </div>
+                </strong>
+
+                <div class="row justify-content-center customizedRow">
+                    <div class="col-12">
+                        <span>
+                            GAME STATUS : <span id="message">not started yet</span>
+                        </span>
+                    </div>
+                </div>  
+
+                <div class="row justify-content-center customizedRow">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-4 box" id="00"></div>
+                            <div class="col-4 box" id="01"></div>
+                            <div class="col-4 box" id="02"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 box" id="10"></div>
+                            <div class="col-4 box" id="11"></div>
+                            <div class="col-4 box" id="12"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 box" id="20"></div>
+                            <div class="col-4 box" id="21"></div>
+                            <div class="col-4 box" id="22"></div>
+                        </div>
+                        <div class="row customizedRow justify-content-center">
+                            <div class="btn btn-outline-primary" id="playAgain">Play Again</div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- EDITTED SECTION starts here -->
+
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
     <!-- end of services -->
@@ -383,7 +485,7 @@
                                 <a class="white" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
                             </li>
                             <li>
-                               <a class="white" href="https://gitforwindows.org/" target="_blank">Git for Windows</a>
+                                <a class="white" href="https://gitforwindows.org/" target="_blank">Git for Windows</a>
                             </li>
                             <li class="media">
                                 <a class="white" href="https://nodejs.org/" target="_blank">Node JS</a>
@@ -422,5 +524,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.8/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+    <script src="assets/js/ourCode.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

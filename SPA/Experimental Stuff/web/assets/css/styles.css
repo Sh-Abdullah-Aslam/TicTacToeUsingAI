@@ -1,0 +1,74 @@
+body {
+    font-family: 'Roboto Condensed';
+}
+.customizedContatiner{
+    background-color: rgba(52, 58, 64, 0.2);
+    margin-top: 25px;
+    border-radius: 20px;
+}
+
+.customizedRow{
+    font-size: 16pt;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#gameTypeSelect:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+#playAgain{
+    visibility: hidden;
+    font-size: 25px;
+}
+
+#message{
+    color: rgb(20,20,200);
+}
+
+.box {
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.box:hover{
+    cursor: pointer;
+    font-size: 55px;
+    border-radius: 20px;
+    border: 3px solid black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    left: 0;
+}
+
+.winPath{
+    color: red!important;
+}
+
+.tableHeaders{
+    border:2px black solid;
+}
+
+#tableEntries{
+    border-left:2px black solid;
+    border-right:2px black solid;
+    border-bottom:2px black solid;
+}
